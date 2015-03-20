@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head lang="cs">
+	<meta charset="utf-8" />	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+        <title>Uživatelská příručka | Slepec</title>
+	<meta name="author" content="Pavel Jurča < xjurp20@vse.cz >" />
+        <meta name="slideshow" content="http://jurcapavel.cz/XoR" />
+	<meta name="description" content="Slepec je Java demo hra s GUI a CLI rozhranim" />
+	<base href="./uzivatelska-prirucka.html" />
+        <style>
+            body {margin: 0;padding: 0;overflow-y: hidden;background: snow;}
+	    #author {position: fixed;z-index: 1;top: 1em;left: 2em;font-size: .7em;}
+	    #author>ul {list-style-type: none;padding: 0;margin: 0;}
+	    #bottom {position: fixed; z-index: 1;bottom: .4em;left: 0;width: 100%;text-align: center;font: normal lighter 1.5em monospace;opacity: .5;}
+	    #bottom>span {color: #79abff;}
+            #page {position: fixed;z-index: 1;top: .4em;right: 1em;font: normal lighter 1.7em monospace;}
+            #container {width: 100%;position: relative;z-index: 1000;font: italic bold 2em serif;}
+	    #container>a {color: black;text-decoration: none;cursor: default;}
+	    #container span#link {cursor: pointer;text-decoration: underline;}
+	    #container span#link:hover {color: orange;}
+	    #container ul {margin-top: 1em;text-align: left;}		
+	    #container ul#scenar {list-style-type: none;}
+	    #container li {text-align: left;margin-bottom: .7em;background: yellow;display: inline-block;padding: .2em;float: left;clear: both;}
+	    #container .a {color: #f45a4e;}
+	    #container .b {color: dodgerblue;background: snow;padding: .4em;border: 7px dashed magenta;}
+	    #container>a>div {width: 90%;margin: 0 5%;padding: 4em .2em 120% .2em;text-align: center;}
+	    #container>a>div#point {padding-top: 1em;font-size: 6em;}
+	    span#title {position: fixed;z-index: -1;right: -45%;color: rgb(69, 178, 224);font-size: 3em;font-weight: lighter;}	
+        </style>
+	<script type="text/javascript">
+            //http://jurcapavel.cz/XoR
+            //Copyleft 2013 Pavel Jurca < xjurp20@vse.cz >
+            
+            window.onload = function() {
+                document.onkeyup = key;
+                document.onclick = click;
+            }
+            
+            function key(k) {
+                if (!k) {
+                    k = window.event;
+                    k.which = k.keyCode;
+                }
+
+                anchor = new Number(window.location.href.match(/[^#]+$/)); //fragment in URI
+                if (isNaN(anchor)) {anchor=0;}
+                //number of the last slide
+                var last = document.getElementById('container').lastElementChild.getAttribute('name').match(/[0-9]+/);
+               	last = new Number(last);
+                
+                switch (k.which) {
+                    case 37: //left key
+			anchor<=0||anchor>last ? anchor=last : anchor--;
+                        break;
+                    case 39: //right key
+			anchor<0||anchor>=last ? anchor=0 : anchor++;
+                        break;
+                    default:
+                        //just stay where you are
+                }
+		//move on to the next/previous slide
+		window.location.href = "#"+anchor;
+		
+                var page = document.getElementById("page");
+                page.children[0].innerHTML = anchor; //current slide No.
+                page.children[1].innerHTML = last; //slides in total
+            }
+	    
+            function click(e) {
+                var target = null;
+                if (window.event) {
+                    e = window.event;
+                    target = window.event.srcElement;
+                } else {
+                    target = e.target;
+                }
+
+		var patt = /container/i;
+                while (target.nodeName!="A" || !patt.test(target.parentNode.getAttribute('id'))) {
+                    target = target.parentNode;
+                }
+                var page = document.getElementById("page");
+                page.children[0].innerHTML = target.getAttribute('href').match(/[^#]+$/);
+            }
+
+	    //treat hypertext links in your slideshow via the SPAN#link onclick event
+            //links will be broken in case of disabled javascript :(
+            function link(href) {
+		//window.open(href, '_self');
+		//window.history.back();
+		window.location.href = href;
+            }
+	</script>
+    </head>
+    <body>
+	<div id="author">
+		<ul>
+		<li><strong>Slepec</strong>
+		<li>Pavel Jurča &lt;xjurp20@vse.cz&gt;
+		<li>Java demo hra s GUI a CLI rozhranim
+		<li><em>4IT115, FIS, VŠE, 2013</em>
+		</ul>
+	</div>
+        <div id="page"><span style="opacity: .8;color: red;">0</span> / <span style="opacity: .3;color: black;">NA</span></div>
+	<div id="bottom"><span>&lt;=</span>&nbsp;&nbsp;XoR&nbsp;&nbsp;<span>=&gt;</span></div>
+        <div id="container">
+		<a name="0" href="#1"><div id="point"><span id="title">Slepec</span></div></a>
+		<a name="1" href="#2"><div>
+			<ul>
+			<li>$> Vitejte v uzivatelske prirucce ke hre Slepec
+			<li>
+			<li>$> neni to zadna FPS, plosinovka ani RPG
+			<li>$> je to docista nudna hra bez grafickeho enginu :'(
+			<li>$> a jeste ke vsemu ji musite neustale komandovat
+			<li>$> ale to vy radi nekoho komandujete, huhh?
+			</ul>
+			</div></a>
+		<a name="2" href="#3"><div id="point"><span class="b">premisy</span></div></a>
+		<a name="3" href="#4"><div>
+			<ul>
+			<li>$> limit na vyhrani je 10 minut
+			<li>$> nahodna vychozi pozice
+			<li>$> zanoreni veci do libovolne urovne
+			<li>$> moznost ulozeni hry
+			<li>$> podpora viceslovnych parametru
+			<li>&nbsp;&nbsp;&nbsp;RTFM! [cti: presun se na dalsi slide]
+			</ul>
+			</div></a>
+		<a name="4" href="#5"><div id="point"><span class="b">ovladani</span></div></a>
+		<a name="5" href="#6"><div>
+			<ul>
+			<li>$> prikazy akceptuji 0, 1 nebo 2 parametry
+			<li>$> viceslovne parametry musi byt uzavreny do uvozovek (") nebo apostrofu (')
+			<li>$> prikazy 'seber' a 'poloz' jen do 2. urovne zanoreni veci
+			<li>$> prikazem 'popis &lt;vec/osoba&gt;' ziskate udaje o dane veci/osobe
+			<li>$> tip: 'popis me' vrati popis hlavni postavy, tedy vas samotnych
+			</ul></div></a>
+		<a name="6" href="#7"><div>
+			<ul>
+			<li>$> bez batohu nelze prenaset veci
+			<li>$> batoh lze sebrat i znovu odlozit
+			<li>$> pomoci jidla a piti lze zvysit/snizit casovy limit
+			<li>$> prikazy hry jsou :
+			<li>&nbsp;&nbsp;&nbsp;jdi, odemkni, zamkni, jez, pij, mluv, seber, poloz, batoh, napovez, popis, kdejsem, save, konec
+			</ul></div></a>
+		<a name="7" href="#8"><div id="point"><span class="b">prolog</span></div></a>
+		<a name="8" href="#9"><div>
+			<ul id="scenar">
+			<li>$> jste pes cukrovkar a ostatni psi na vas volaji: "Cukrousi!"
+			<li>&nbsp;&nbsp;&nbsp;zijete v malem rodinnem domku na kraji Prahy
+			<li>&nbsp;&nbsp;&nbsp;s vasi panickou (vdovickou), ktera se vas,
+			<li>&nbsp;&nbsp;&nbsp;maleho mrzacka a tulaka, ujala pote, co jste na ulici v
+			<li>&nbsp;&nbsp;&nbsp;zachvatu diabetes poprskali jeji nove boty od Jimmy Choo
+			</ul>
+			</div></a>
+		<a name="9" href="#10"><div id="point"><span class="b">scenar</span></div></a>
+		<a name="10" href="#11"><div>
+			<ul id="scenar">
+			<li>$> prave jste v zachvatu a potrebujete 2 veci
+			<li>&nbsp;&nbsp;&nbsp;prasek cepels a vodu (prasek snezte a vodou zapijte)
+			<li>&nbsp;&nbsp;&nbsp;a potrebujete je do +/-10 minut
+			<li>&nbsp;&nbsp;&nbsp;samozrejme mohou byt kdekoli
+			</ul>
+			</div></a>
+		<a name="11" href="#12"><div>
+			<ul id="scenar">
+			<li>&nbsp;&nbsp;&nbsp;vase panicka nepomuze, je na masazi..
+			<li>&nbsp;&nbsp;&nbsp;ale krome vas je tady jeste nekdo - Myval!
+			<li>&nbsp;&nbsp;&nbsp;je to mrzout, ale za mydlo vymeni cokoli
+			<li>
+			<li>
+			<li style="background: whitesmoke;">&nbsp;#zlomte vaz&nbsp;
+			</ul>
+			</div></a>
+		<a name="12" href="#13"><div id="point"><span class="b">planek</span></div></a>
+		<a name="13" href="#14"><div>
+			<img src="./planek-hry.png" width=1000 height=1050 title="planek hry Slepec" style="width: 45%;height: 45%;padding: 0;margin: 0;" />
+			</div></a>
+		<a name="14" href="#15"><div id="point"><span class="b">dodatky</span></div></a>
+		<a name="15" href="#16"><div>
+			<ul>
+ 			<li>$> osoby a veci nejsou na planku zobrazeny zcela umyslne
+ 			<li>$> behem programovani hry nebylo ublizeno na cti zadnemu psu
+ 			<li>$> Slepec huhh?
+ 			<li>&nbsp;&nbsp;&nbsp;diabetes I. ci II. stupne vede casto k retinopatii
+ 			<li>&nbsp;&nbsp;&nbsp;2% diabetiku uplne oslepnou
+			<li>
+			<li>$> <span id="link" onclick="link('http://jurcapavel.cz');">jurcapavel.cz</span>
+			</ul>
+			</div></a>
+		<a name="16" href="#0"><div id="point"><span class="a">..a ted uz bezte hrat!</span></div></a>
+        </div>
+    </body>
+</html>
