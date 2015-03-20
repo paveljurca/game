@@ -11,7 +11,7 @@ import slepec.hra.planek.prostor.vec.*;
 
 /**
  *
- * @author gogo
+ * @author Pavel Jurca, xjurp20@vse.cz
  */
 public class OsobaTest {
     
