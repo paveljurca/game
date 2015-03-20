@@ -2,14 +2,14 @@
 
 ## Slepec, v2
 
-Copyleft 2013 Pavel Jurča <xjurp20@vse.cz>
-4IT115, FIS, VŠE, 2013
---
+Copyleft 2013 Pavel Jurča, xjurp20 [uzenáč] vse [tečka] cz
+
+==> 4IT115, FIS, VŠE, 2013 <==
+
 půdorys domu © 2002 GSERVIS s.r.o.
 překreslil © 2010 Pavel Jurča
---
 images courtesy of FreeDigitalPhotos.net
---
+
 
 ## RUN
 	> dvojklik na soubor 'Slepec.jar'
@@ -21,7 +21,7 @@ images courtesy of FreeDigitalPhotos.net
 		> * 'java -jar Slepec.jar text' spusti hru v textovem rezimu
 
 
-## INTRO
+## SYNOPSIS
 	> Slepec je demo hra s GUI a CLI rozhranim
 
 	* prikazy akceptuji 0, 1 nebo 2 parametry
@@ -78,7 +78,7 @@ images courtesy of FreeDigitalPhotos.net
         > refaktorovat do 'cz.jurcapavel.*' balicku
 
 
-## HISTORY
+## CHANGELOG
 	verze 2
 		> GUI rozhrani
                     > obrazkovy panel batohu
@@ -126,7 +126,7 @@ images courtesy of FreeDigitalPhotos.net
 	> read the code ;)
 
 
-@ COMMENTS
+## COMMENTS
 	> soubor 'Slepec.jar' je samotna hra, soubor 'img.jar' jsou obrazky pouzite ve hre
 		> pro spravne fungovani potrebujete oba (minimalne ale 'Slepec.jar')
 		> oba soubory musi byt umisteny ve stejnem adresari
@@ -142,7 +142,7 @@ images courtesy of FreeDigitalPhotos.net
 			> 'new Scenar()' vytvori novy herni plan hry Slepec
                         > + pridava vycet vsech Prostoru i Veci hry
 
-@ ADDENDUM
+## ADDENDUM
 
         > adventura mela puvodne vychazet ze skeletonu Zork 1
           http://www.bluej.org/resources/exercises.html#zork1
