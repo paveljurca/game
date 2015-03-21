@@ -1,5 +1,7 @@
 # adventura
 
+![adventura](adventura.png)
+
 ## Slepec, v2
 
 Copyleft 2013 Pavel Jurča, xjurp20 [uzenáč] vse [tečka] cz
