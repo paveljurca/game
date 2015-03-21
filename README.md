@@ -6,10 +6,6 @@ Copyleft 2013 Pavel Jurča, xjurp20 [uzenáč] vse [tečka] cz
 
 ==> 4IT115, FIS, VŠE, 2013 <==
 
-půdorys domu © 2002 GSERVIS s.r.o.
-překreslil © 2010 Pavel Jurča
-images courtesy of FreeDigitalPhotos.net
-
 
 ## RUN
 	> dvojklik na soubor 'Slepec.jar'
@@ -149,4 +145,12 @@ images courtesy of FreeDigitalPhotos.net
 
           upraveneho do kurzu 4IT101
           http://java.vse.cz/wiki/uploads/4it101/adventuraZaklad2013.zip
+
+## COPYRIGHT or so
+
+půdorys domu © 2002 GSERVIS s.r.o.
+
+překreslil © 2010 Pavel Jurča
+
+images courtesy of FreeDigitalPhotos.net
 
