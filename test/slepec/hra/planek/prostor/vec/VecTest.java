@@ -11,7 +11,7 @@ import org.junit.Test;
 
 /**
  *
- * @author Pavel Jurca, xjurp20@vse.cz
+ * @author
  */
 public class VecTest {
 
