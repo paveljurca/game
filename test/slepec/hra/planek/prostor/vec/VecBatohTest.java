@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package slepec.hra.planek.prostor.vec;
 
 import static org.junit.Assert.*;
@@ -10,7 +6,7 @@ import org.junit.Test;
 
 /**
  *
- * @author
+ * @author Pavel Jurca, xjurp20@vse.cz
  */
 public class VecBatohTest {
 

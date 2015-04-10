@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package slepec.hra.planek.prostor.osoba;
 
 import java.util.HashMap;
@@ -13,7 +9,7 @@ import slepec.hra.planek.prostor.vec.*;
 
 /**
  *
- * @author
+ * @author Pavel Jurca, xjurp20@vse.cz
  */
 public class OsobaMyvalTest {
 

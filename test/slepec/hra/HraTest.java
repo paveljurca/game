@@ -10,7 +10,7 @@ import slepec.hra.planek.prostor.vec.*;
 
 /**
  *
- * @author
+ * @author Pavel Jurca, xjurp20@vse.cz
  */
 public class HraTest {
 
