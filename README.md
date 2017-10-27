@@ -3,12 +3,6 @@
 * graphics mode (GUI) `java -jar game.jar`
 * text mode (CLI) `java -jar game.jar text`
 
-[DOWNLOAD](https://github.com/paveljurca/game/tree/master/download)
-
-(c) 2013 Pavel Jurca, [University of Economics in Prague](https://isis.vse.cz/katalog/syllabus.pl?predmet=82362;typ=1;jazyk=3;vystup=1;lang=en)
-
-![game](screenshots/game.png)
-
 ### game commands
 
 ```
@@ -27,3 +21,9 @@ odemkni  /unlock <room>
   seber  /grab <what> [where/who]
  zamkni  /lock <room>
  ```
+
+(c) 2013 Pavel Jurca, [University of Economics in Prague](https://isis.vse.cz/katalog/syllabus.pl?predmet=82362;typ=1;jazyk=3;vystup=1;lang=en)
+
+![game](screenshots/game.png)
+
+## [DOWNLOAD](https://github.com/paveljurca/game/tree/master/download)
