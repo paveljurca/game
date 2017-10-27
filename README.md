@@ -22,8 +22,8 @@ odemkni  /unlock <room>
  zamkni  /lock <room>
  ```
 
-(c) 2013 Pavel Jurca, [University of Economics in Prague](https://isis.vse.cz/katalog/syllabus.pl?predmet=82362;typ=1;jazyk=3;vystup=1;lang=en)
+## [DOWNLOAD](https://github.com/paveljurca/game/tree/master/download)
 
 ![game](screenshots/game.png)
 
-## [DOWNLOAD](https://github.com/paveljurca/game/tree/master/download)
+(c) 2013 Pavel Jurca, [University of Economics in Prague](https://isis.vse.cz/katalog/syllabus.pl?predmet=82362;typ=1;jazyk=3;vystup=1;lang=en)
